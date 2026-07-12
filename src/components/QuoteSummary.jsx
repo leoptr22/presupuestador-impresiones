@@ -28,7 +28,7 @@ export function QuoteSummary({ profile, lines, customer, onCustomerChange, onRem
   }
 
   return (
-    <aside className="panel quote-panel">
+    <aside className={`panel quote-panel profile-${profile}`}>
       <div className="quote-head">
         <span>Presupuesto</span>
         <b>{profiles[profile].label}</b>

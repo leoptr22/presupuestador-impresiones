@@ -7,7 +7,7 @@ export function ProfilePicker({ value, onChange }) {
         <button
           key={key}
           type="button"
-          className={value === key ? 'selected' : ''}
+          className={`profile-card profile-${key}${value === key ? ' selected' : ''}`}
           onClick={() => onChange(key)}
         >
           <b>{profile.label}</b>
