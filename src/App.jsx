@@ -1,4 +1,4 @@
-import { BookOpen, Layers, Plus, Trash2 } from 'lucide-react'
+import { BookOpen, ExternalLink, Layers, Plus, Trash2 } from 'lucide-react'
 import { jsPDF } from 'jspdf'
 import { useState } from 'react'
 import { FinishingModal } from './components/FinishingModal.jsx'
@@ -105,6 +105,10 @@ export function App() {
           <span>Bajada laser y terminaciones</span>
         </div>
         <div className="topbar-actions">
+          <a className="secondary-action nav-link-action" href="https://presupuestador-rojas.vercel.app/">
+            <ExternalLink size={18} />
+            Gran Formato
+          </a>
           <button className="secondary-action" type="button" onClick={clearPageData}>
             <Trash2 size={18} />
             Limpiar datos
