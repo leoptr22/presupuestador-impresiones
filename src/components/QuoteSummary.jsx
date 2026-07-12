@@ -6,7 +6,7 @@ import { buildWhatsAppQuote, money, quoteTotal } from '../lib/quote.js'
 export function QuoteSummary({ profile, lines, customer, onCustomerChange, onRemove, onClear, onExport }) {
   const [copied, setCopied] = useState(false)
   const total = quoteTotal(lines)
-  const ivaNote = profile === 'imprenta' ? 'Valores sin IVA' : 'Valores finales orientativos'
+  const ivaNote = profile === 'imprenta' ? 'Valores mas IVA' : 'Valores finales orientativos'
 
   async function copyQuote() {
     const text = buildWhatsAppQuote({ profile, profileLabel: profiles[profile].label, customer, lines })

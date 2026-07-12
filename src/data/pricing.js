@@ -1,7 +1,7 @@
 export const profiles = {
   publico: { label: 'Publico', note: 'Precio final orientativo' },
   disenadores: { label: 'Disenadores', note: 'Lista profesional' },
-  imprenta: { label: 'Imprenta', note: 'Precios sin IVA' },
+  imprenta: { label: 'Imprenta', note: 'Precios mas IVA' },
 }
 
 export const ranges = {

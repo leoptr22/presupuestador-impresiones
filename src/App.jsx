@@ -51,7 +51,7 @@ export function App() {
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(10)
     doc.text(`Lista: ${profiles[profile].label}`, margin + 4, y + 7.5)
-    doc.text(profile === 'imprenta' ? 'SIN IVA' : 'ORIENTATIVO', pageWidth - margin - 4, y + 7.5, { align: 'right' })
+    doc.text(profile === 'imprenta' ? 'MAS IVA' : 'ORIENTATIVO', pageWidth - margin - 4, y + 7.5, { align: 'right' })
     y += 20
 
     doc.setTextColor(22, 43, 49)
@@ -89,7 +89,7 @@ export function App() {
     doc.rect(margin, y, contentWidth, 17, 'F')
     doc.setTextColor(255, 255, 255)
     doc.setFont('helvetica', 'bold')
-    doc.text(profile === 'imprenta' ? 'Total sin IVA' : 'Total', margin + 5, y + 10)
+    doc.text(profile === 'imprenta' ? 'Total mas IVA' : 'Total', margin + 5, y + 10)
     doc.setFontSize(15)
     doc.text(money.format(quoteTotal(lines)), pageWidth - margin - 5, y + 10, { align: 'right' })
 

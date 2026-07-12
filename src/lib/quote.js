@@ -68,7 +68,7 @@ export function buildWhatsAppQuote({ profileLabel, profile, customer, lines }) {
   const header = [
     'Presupuesto Rojas Impresiones',
     `Fecha: ${date}`,
-    `Lista: ${profileLabel}${profile === 'imprenta' ? ' - ' : ''}`,
+    `Lista: ${profileLabel}${profile === 'imprenta' ? ' - mas IVA' : ''}`,
   ]
   const customerLines = [
     customer.name?.trim() ? `Cliente: ${customer.name.trim()}` : null,
