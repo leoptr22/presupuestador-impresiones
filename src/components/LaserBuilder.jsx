@@ -56,7 +56,7 @@ export function LaserBuilder({ profile, onAdd }) {
   const [productId, setProductId] = useState('')
   const [rangeIndex, setRangeIndex] = useState(0)
   const [side, setSide] = useState('one')
-  const [quantity, setQuantity] = useState(25)
+  const [quantity, setQuantity] = useState('')
   const [description, setDescription] = useState('')
 
   const profileProducts = useMemo(() => laserProducts.filter(item => hasProfilePrice(item, profile)), [profile])
@@ -139,7 +139,14 @@ export function LaserBuilder({ profile, onAdd }) {
         />
         <label>
           Cantidad a cobrar
-          <input disabled={!product} type="number" min="1" value={quantity} onChange={event => setQuantity(event.target.value)} />
+          <input
+            disabled={!product}
+            type="number"
+            min="1"
+            value={quantity}
+            onChange={event => setQuantity(event.target.value)}
+            placeholder="Ingrese la cantidad de trabajo"
+          />
           <small className="field-help">Cantidad real de hojas/planchas. El rango solo define el precio unitario.</small>
         </label>
         <label>
