@@ -43,6 +43,12 @@ button:disabled { cursor: not-allowed; opacity: .48; }
 .brand-copy { border-left: 1px solid var(--line); padding-left: 14px; }
 .topbar strong { display: block; font-size: 16px; font-weight: 800; }
 .topbar span { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+.topbar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 main {
   width: min(1240px, calc(100% - 40px));
@@ -632,4 +638,9 @@ select:focus {
   }
   .brand-logo { width: 124px; }
   .brand-copy { display: none; }
+  .topbar-actions .secondary-action {
+    width: auto;
+    min-width: 44px;
+    padding: 0 11px;
+  }
 }

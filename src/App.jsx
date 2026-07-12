@@ -104,6 +104,12 @@ export function App() {
           <strong>Presupuestador</strong>
           <span>Bajada laser y terminaciones</span>
         </div>
+        <div className="topbar-actions">
+          <button className="secondary-action" type="button" onClick={clearPageData}>
+            <Trash2 size={18} />
+            Limpiar datos
+          </button>
+        </div>
       </header>
 
       <main>
@@ -113,10 +119,6 @@ export function App() {
             <h1>PRESUPUESTADOR PARA BAJADAS LASER Y TERMINACIONES</h1>
           </div>
           <div className="hero-actions">
-            <button className="secondary-action" type="button" onClick={clearPageData}>
-              <Trash2 size={18} />
-              Limpiar datos
-            </button>
             <button className="open-modal-button" type="button" onClick={() => setFinishingOpen(true)}>
               <BookOpen size={18} />
               Terminaciones
