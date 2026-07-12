@@ -1,4 +1,4 @@
-export function SegmentedControl({ label, value, options, onChange }) {
+export function SegmentedControl({ label, value, options, onChange, disabled = false }) {
   return (
     <div className="segmented-field">
       {label && <span>{label}</span>}
@@ -8,6 +8,7 @@ export function SegmentedControl({ label, value, options, onChange }) {
             key={option.value}
             type="button"
             className={value === option.value ? 'active' : ''}
+            disabled={disabled}
             onClick={() => onChange(option.value)}
           >
             {option.label}

@@ -1,4 +1,4 @@
-import { BookOpen, Layers, Plus } from 'lucide-react'
+import { BookOpen, Layers, Plus, Trash2 } from 'lucide-react'
 import { jsPDF } from 'jspdf'
 import { useState } from 'react'
 import { FinishingModal } from './components/FinishingModal.jsx'
@@ -13,6 +13,7 @@ export function App() {
   const [lines, setLines] = useState([])
   const [customer, setCustomer] = useState({ name: '', contact: '' })
   const [finishingOpen, setFinishingOpen] = useState(false)
+  const [resetKey, setResetKey] = useState(0)
 
   function addLine(line) {
     setLines(current => [...current, line])
@@ -20,6 +21,13 @@ export function App() {
 
   function updateCustomer(field, value) {
     setCustomer(current => ({ ...current, [field]: value }))
+  }
+
+  function clearPageData() {
+    setLines([])
+    setCustomer({ name: '', contact: '' })
+    setFinishingOpen(false)
+    setResetKey(current => current + 1)
   }
 
   function exportPdf() {
@@ -104,10 +112,16 @@ export function App() {
             <p>Impresiones</p>
             <h1>PRESUPUESTADOR PARA BAJADAS LASER Y TERMINACIONES</h1>
           </div>
-          <button className="open-modal-button" type="button" onClick={() => setFinishingOpen(true)}>
-            <BookOpen size={18} />
-            Terminaciones
-          </button>
+          <div className="hero-actions">
+            <button className="secondary-action" type="button" onClick={clearPageData}>
+              <Trash2 size={18} />
+              Limpiar datos
+            </button>
+            <button className="open-modal-button" type="button" onClick={() => setFinishingOpen(true)}>
+              <BookOpen size={18} />
+              Terminaciones
+            </button>
+          </div>
         </section>
 
         <section className="panel profile-panel">
@@ -123,7 +137,7 @@ export function App() {
 
         <div className="workspace">
           <div className="left-column">
-            <LaserBuilder profile={profile} onAdd={addLine} />
+            <LaserBuilder key={resetKey} profile={profile} onAdd={addLine} />
             <section className="panel helper-panel">
               <div>
                 <Layers size={22} />

@@ -1,5 +1,5 @@
 import { Plus, Search } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { laserProducts } from '../data/pricing.js'
 import { getLaserPrice, makeLaserLine, money } from '../lib/quote.js'
 import { SegmentedControl } from './SegmentedControl.jsx'
@@ -53,17 +53,17 @@ function orderedGroups(items, profile) {
 
 export function LaserBuilder({ profile, onAdd }) {
   const [query, setQuery] = useState('')
-  const [productId, setProductId] = useState(laserProducts[0].id)
+  const [productId, setProductId] = useState('')
   const [rangeIndex, setRangeIndex] = useState(0)
   const [side, setSide] = useState('one')
   const [quantity, setQuantity] = useState(25)
   const [description, setDescription] = useState('')
 
   const profileProducts = useMemo(() => laserProducts.filter(item => hasProfilePrice(item, profile)), [profile])
-  const product = profileProducts.find(item => item.id === productId) ?? profileProducts[0] ?? laserProducts[0]
-  const ranges = product.rangesByProfile[profile] ?? []
-  const safeRangeIndex = Math.min(rangeIndex, ranges.length - 1)
-  const price = getLaserPrice(product, profile, safeRangeIndex, side)
+  const product = profileProducts.find(item => item.id === productId) ?? null
+  const ranges = product?.rangesByProfile[profile] ?? []
+  const safeRangeIndex = ranges.length ? Math.min(rangeIndex, ranges.length - 1) : 0
+  const price = product ? getLaserPrice(product, profile, safeRangeIndex, side) : null
   const subtotal = price == null ? null : Math.round(price * (Number(quantity) || 0))
 
   const grouped = useMemo(() => {
@@ -75,14 +75,6 @@ export function LaserBuilder({ profile, onAdd }) {
     return orderedGroups(filtered, profile)
   }, [profile, profileProducts, query])
 
-  useEffect(() => {
-    if (!profileProducts.some(item => item.id === productId)) {
-      setProductId(profileProducts[0]?.id ?? laserProducts[0].id)
-      setRangeIndex(0)
-      setSide('one')
-    }
-  }, [productId, profileProducts])
-
   function selectProduct(nextId) {
     setProductId(nextId)
     setRangeIndex(0)
@@ -90,7 +82,7 @@ export function LaserBuilder({ profile, onAdd }) {
   }
 
   function addLine() {
-    if (price == null) return
+    if (!product || price == null) return
     onAdd(makeLaserLine({ product, profile, rangeIndex: safeRangeIndex, side, quantity, description }))
   }
 
@@ -134,7 +126,7 @@ export function LaserBuilder({ profile, onAdd }) {
       <div className="config-grid">
         <label>
           Rango de hojas
-          <select value={Math.min(rangeIndex, ranges.length - 1)} onChange={event => setRangeIndex(Number(event.target.value))}>
+          <select disabled={!product} value={safeRangeIndex} onChange={event => setRangeIndex(Number(event.target.value))}>
             {ranges.map((range, index) => <option key={range} value={index}>{range}</option>)}
           </select>
         </label>
@@ -142,26 +134,36 @@ export function LaserBuilder({ profile, onAdd }) {
           label="Caras"
           value={side}
           onChange={setSide}
+          disabled={!product}
           options={[{ value: 'one', label: 'Una cara' }, { value: 'two', label: 'Dos caras' }]}
         />
         <label>
           Cantidad a cobrar
-          <input type="number" min="1" value={quantity} onChange={event => setQuantity(event.target.value)} />
+          <input disabled={!product} type="number" min="1" value={quantity} onChange={event => setQuantity(event.target.value)} />
           <small className="field-help">Cantidad real de hojas/planchas. El rango solo define el precio unitario.</small>
         </label>
         <label>
           Detalle opcional
-          <input value={description} onChange={event => setDescription(event.target.value)} placeholder="Ej. portada, interior, stickers..." />
+          <input disabled={!product} value={description} onChange={event => setDescription(event.target.value)} placeholder="Ej. portada, interior, stickers..." />
         </label>
       </div>
 
       <div className="selected-item-box">
-        <div>
-          <small>Item seleccionado</small>
-          <h3>{product.name}</h3>
-          <p>{product.section} · {product.format}</p>
-          <span>{ranges[safeRangeIndex]} · {side === 'two' ? 'dos caras' : 'una cara'} · {quantity || 0} hojas/planchas</span>
-        </div>
+        {product ? (
+          <div>
+            <small>Item seleccionado</small>
+            <h3>{product.name}</h3>
+            <p>{product.section} - {product.format}</p>
+            <span>{ranges[safeRangeIndex]} - {side === 'two' ? 'dos caras' : 'una cara'} - {quantity || 0} hojas/planchas</span>
+          </div>
+        ) : (
+          <div>
+            <small>Item seleccionado</small>
+            <h3>Ningun item seleccionado</h3>
+            <p>Elegir una opcion de la lista para calcular.</p>
+            <span>Sin precio hasta seleccionar un item.</span>
+          </div>
+        )}
         <strong>{subtotal == null ? 'Consultar' : money.format(subtotal)}</strong>
       </div>
 
@@ -171,7 +173,7 @@ export function LaserBuilder({ profile, onAdd }) {
           <strong>{price == null ? 'Consultar' : money.format(price)}</strong>
           <p>{quantity || 0} x {price == null ? 'sin precio' : money.format(price)}</p>
         </div>
-        <button className="primary-action" type="button" disabled={price == null} onClick={addLine}>
+        <button className="primary-action" type="button" disabled={!product || price == null} onClick={addLine}>
           <Plus size={18} />
           Agregar bajada
         </button>

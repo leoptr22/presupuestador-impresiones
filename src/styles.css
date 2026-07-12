@@ -71,6 +71,13 @@ main {
   line-height: 1.02;
   letter-spacing: 0;
 }
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 
 .panel {
   background: var(--paper);
@@ -594,6 +601,8 @@ select:focus {
 @media (max-width: 700px) {
   main { width: calc(100% - 28px); padding-top: 24px; }
   .hero { display: grid; }
+  .hero-actions { justify-content: stretch; }
+  .hero-actions > button { width: 100%; }
   .open-modal-button { width: 100%; }
   .profile-grid,
   .product-group > div,
