@@ -51,6 +51,27 @@ function orderedGroups(items, profile) {
   })
 }
 
+function parseRangeLimit(range) {
+  if (!range) return null
+  const normalized = range.toLowerCase().replace(/\s+/g, ' ').trim()
+  const between = normalized.match(/^(\d+)\s*a\s*(\d+)$/)
+  if (between) return { min: Number(between[1]), max: Number(between[2]) }
+
+  const plusDe = normalized.match(/^\+\s*de\s*(\d+)$/)
+  if (plusDe) return { min: Number(plusDe[1]) + 1, max: Infinity }
+
+  const numberPlus = normalized.match(/^(\d+)\s*\+$/)
+  if (numberPlus) return { min: Number(numberPlus[1]), max: Infinity }
+
+  return null
+}
+
+function rangeLimitText(limit) {
+  if (!limit) return ''
+  if (limit.max === Infinity) return `desde ${limit.min} en adelante`
+  return `entre ${limit.min} y ${limit.max}`
+}
+
 export function LaserBuilder({ profile, onAdd }) {
   const [query, setQuery] = useState('')
   const [productId, setProductId] = useState('')
@@ -64,6 +85,17 @@ export function LaserBuilder({ profile, onAdd }) {
   const ranges = product?.rangesByProfile[profile] ?? []
   const safeRangeIndex = ranges.length ? Math.min(rangeIndex, ranges.length - 1) : 0
   const price = product ? getLaserPrice(product, profile, safeRangeIndex, side) : null
+  const selectedRange = ranges[safeRangeIndex]
+  const rangeLimit = parseRangeLimit(selectedRange)
+  const quantityNumber = Number(quantity)
+  const hasQuantity = quantity !== '' && Number.isFinite(quantityNumber)
+  const quantityMatchesRange = !product || !hasQuantity || !rangeLimit
+    ? true
+    : quantityNumber >= rangeLimit.min && quantityNumber <= rangeLimit.max
+  const canAddLine = Boolean(product && price != null && hasQuantity && quantityMatchesRange)
+  const rangeWarning = product && hasQuantity && !quantityMatchesRange
+    ? `La cantidad debe estar ${rangeLimitText(rangeLimit)} para el rango "${selectedRange}".`
+    : ''
   const subtotal = price == null ? null : Math.round(price * (Number(quantity) || 0))
 
   const grouped = useMemo(() => {
@@ -82,7 +114,7 @@ export function LaserBuilder({ profile, onAdd }) {
   }
 
   function addLine() {
-    if (!product || price == null) return
+    if (!canAddLine) return
     onAdd(makeLaserLine({ product, profile, rangeIndex: safeRangeIndex, side, quantity, description }))
   }
 
@@ -142,12 +174,16 @@ export function LaserBuilder({ profile, onAdd }) {
           <input
             disabled={!product}
             type="number"
-            min="1"
+            min={rangeLimit?.min ?? 1}
+            max={rangeLimit?.max === Infinity ? undefined : rangeLimit?.max}
             value={quantity}
             onChange={event => setQuantity(event.target.value)}
             placeholder="Ingrese la cantidad de trabajo"
+            className={rangeWarning ? 'field-invalid' : ''}
           />
-          <small className="field-help">Cantidad real de hojas/planchas. El rango solo define el precio unitario.</small>
+          <small className={rangeWarning ? 'field-help field-error' : 'field-help'}>
+            {rangeWarning || `Cantidad real de hojas/planchas. Debe coincidir con el rango seleccionado${rangeLimit ? ` (${rangeLimitText(rangeLimit)})` : ''}.`}
+          </small>
         </label>
         <label>
           Detalle opcional
@@ -161,7 +197,7 @@ export function LaserBuilder({ profile, onAdd }) {
             <small>Item seleccionado</small>
             <h3>{product.name}</h3>
             <p>{product.section} - {product.format}</p>
-            <span>{ranges[safeRangeIndex]} - {side === 'two' ? 'dos caras' : 'una cara'} - {quantity || 0} hojas/planchas</span>
+            <span>{selectedRange} - {side === 'two' ? 'dos caras' : 'una cara'} - {quantity || 0} hojas/planchas</span>
           </div>
         ) : (
           <div>
@@ -180,7 +216,7 @@ export function LaserBuilder({ profile, onAdd }) {
           <strong>{price == null ? 'Consultar' : money.format(price)}</strong>
           <p>{quantity || 0} x {price == null ? 'sin precio' : money.format(price)}</p>
         </div>
-        <button className="primary-action" type="button" disabled={!product || price == null} onClick={addLine}>
+        <button className="primary-action" type="button" disabled={!canAddLine} onClick={addLine}>
           <Plus size={18} />
           Agregar bajada
         </button>

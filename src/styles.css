@@ -285,6 +285,10 @@ select:focus {
   border-color: var(--cyan);
   box-shadow: 0 0 0 3px rgba(12, 159, 179, .11);
 }
+input.field-invalid {
+  border-color: #d6265b;
+  box-shadow: 0 0 0 3px rgba(214, 38, 91, .1);
+}
 .field-help {
   display: block;
   margin-top: 6px;
@@ -292,6 +296,10 @@ select:focus {
   font-size: 10px;
   font-weight: 500;
   line-height: 1.35;
+}
+.field-error {
+  color: #b91c48;
+  font-weight: 700;
 }
 .selected-item-box {
   margin-top: 18px;
