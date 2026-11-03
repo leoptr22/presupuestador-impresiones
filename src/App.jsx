@@ -125,6 +125,7 @@ export function App() {
           <div>
             <p>Impresiones</p>
             <h1>PRESUPUESTADOR PARA BAJADAS LASER Y TERMINACIONES</h1>
+            <div className="price-update-date">Precios vigentes actualizados al <time dateTime="2026-10-19">19/10/2026</time></div>
           </div>
           <div className="hero-actions">
             <button className="open-modal-button" type="button" onClick={() => setFinishingOpen(true)}>

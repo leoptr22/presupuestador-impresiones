@@ -107,6 +107,12 @@ main {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+.price-update-date {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
 
 .panel {
   background: var(--paper);
