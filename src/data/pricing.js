@@ -36,9 +36,9 @@ export const laserProducts = [
       imprenta: ['51 a 100', '101 a 250', '251 a 500', '501 a 1000', '1001 a 2000', '+ de 2000'],
     },
     prices: {
-      publico: [pair(140, 210), pair(90, 140), pair(85, 110), pair(75, 100), pair(70, 90), pair(55, 75), pair(50, 65), pair(47, 65)],
-      disenadores: [pair(85, 115), pair(75, 100), pair(70, 95), pair(55, 75), pair(50, 70), pair(47, 65)],
-      imprenta: [pair(65, 95), pair(60, 85), pair(55, 80), pair(40, 55), pair(37, 55), pair(36, 47)],
+      publico: [pair(150, 225), pair(95, 150), pair(90, 120), pair(80, 105), pair(75, 95), pair(60, 80), pair(55, 75), pair(49.5, 65)],
+      disenadores: [pair(90, 120), pair(80, 110), pair(75, 100), pair(60, 80), pair(55, 75), pair(49.4, 70)],
+      imprenta: [pair(70, 100), pair(65, 90), pair(60, 85), pair(45, 65), pair(39.2, 55), pair(38, 49.4)],
     },
   },
   {
@@ -53,9 +53,9 @@ export const laserProducts = [
       imprenta: ['51 a 100', '101 a 250', '251 a 500', '501 a 1000', '1001 a 2000', '+ de 2000'],
     },
     prices: {
-      publico: [pair(480, 690), pair(388, 565), pair(308, 405), pair(292, 375), pair(270, 350), pair(255, 325), pair(235, 300), pair(195, 245)],
-      disenadores: [pair(280, 365), pair(265, 340), pair(245, 315), pair(230, 295), pair(210, 270), pair(175, 220)],
-      imprenta: [pair(225, 300), pair(220, 295), pair(205, 275), pair(190, 255), pair(180, 240), pair(145, 195)],
+      publico: [pair(490, 700), pair(395, 575), pair(314, 415), pair(297, 385), pair(285, 365), pair(260, 340), pair(245, 315), pair(200, 250)],
+      disenadores: [pair(285, 375), pair(270, 350), pair(255, 330), pair(235, 305), pair(220, 285), pair(180, 225)],
+      imprenta: [pair(235, 315), pair(225, 300), pair(210, 280), pair(195, 260), pair(185, 245), pair(150, 200)],
     },
   },
   {
@@ -66,7 +66,7 @@ export const laserProducts = [
     finish: 'Pieza comercial liviana',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [pair(1350, 1950), pair(1250, 1750), pair(1100, 1550)],
+      publico: [pair(1400, 2050), pair(1300, 1850), pair(1150, 1650)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -79,7 +79,7 @@ export const laserProducts = [
     finish: 'Flyers, certificados y presentaciones',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [pair(1450, 2150), pair(1300, 1950), pair(1150, 1700)],
+      publico: [pair(1550, 2250), pair(1400, 2050), pair(1250, 1800)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -92,7 +92,7 @@ export const laserProducts = [
     finish: 'Etiquetas y stickers sin troquel',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [unit(1950), unit(1750), unit(1550)],
+      publico: [unit(2050), unit(1850), unit(1650)],
       disenadores: [noUnit(), noUnit(), noUnit()],
       imprenta: [noUnit(), noUnit(), noUnit()],
     },
@@ -105,7 +105,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [unit(2350), unit(2300), unit(2150)],
+      publico: [unit(2500), unit(2400), unit(2250)],
       disenadores: [noUnit(), noUnit(), noUnit()],
       imprenta: [noUnit(), noUnit(), noUnit()],
     },
@@ -118,7 +118,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [unit(3750), unit(3600), unit(3400)],
+      publico: [unit(3600), unit(3500), unit(3250)],
       disenadores: [noUnit(), noUnit(), noUnit()],
       imprenta: [noUnit(), noUnit(), noUnit()],
     },
@@ -131,7 +131,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [unit(1850), unit(1800), unit(1700)],
+      publico: [unit(1950), unit(1900), unit(1750)],
       disenadores: [noUnit(), noUnit(), noUnit()],
       imprenta: [noUnit(), noUnit(), noUnit()],
     },
@@ -144,7 +144,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [unit(2250), unit(2200), unit(2015)],
+      publico: [unit(2350), unit(2300), unit(2105)],
       disenadores: [noUnit(), noUnit(), noUnit()],
       imprenta: [noUnit(), noUnit(), noUnit()],
     },
@@ -157,7 +157,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ranges.a4Publico, disenadores: ranges.a4Publico, imprenta: ranges.a4Publico },
     prices: {
-      publico: [unit(960), unit(845), unit(735)],
+      publico: [unit(1050), unit(925), unit(805)],
       disenadores: [noUnit(), noUnit(), noUnit()],
       imprenta: [noUnit(), noUnit(), noUnit()],
     },
@@ -170,7 +170,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ['1 a 5', '6 a 25', '26 a 50'], disenadores: ['1 a 5', '6 a 25', '26 a 50'], imprenta: ['1 a 5', '6 a 25', '26 a 50'] },
     prices: {
-      publico: [pair(1700, 2250), pair(1525, 2025), pair(1350, 1800)],
+      publico: [pair(1750, 2300), pair(1575, 2075), pair(1400, 1825)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -183,7 +183,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ['1 a 5', '6 a 25', '26 a 50'], disenadores: ['1 a 5', '6 a 25', '26 a 50'], imprenta: ['1 a 5', '6 a 25', '26 a 50'] },
     prices: {
-      publico: [pair(2050, 2800), pair(1850, 2525), pair(1625, 2225)],
+      publico: [pair(2150, 2950), pair(1925, 2650), pair(1700, 2350)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -196,7 +196,7 @@ export const laserProducts = [
     finish: 'Disponible en lista Publico',
     rangesByProfile: { publico: ['1 a 5', '6 a 25', '26 a 50'], disenadores: ['1 a 5', '6 a 25', '26 a 50'], imprenta: ['1 a 5', '6 a 25', '26 a 50'] },
     prices: {
-      publico: [pair(2100, 2850), pair(1900, 2550), pair(1675, 2250)],
+      publico: [pair(2200, 3000), pair(1975, 2700), pair(1750, 2375)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -209,9 +209,9 @@ export const laserProducts = [
     finish: 'Planos, pruebas y originales grandes',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(345, 520), pair(200, 295), pair(190, 290), pair(175, 260), pair(165, 250), pair(155, 235), pair(155, 230)],
-      disenadores: [pair(300, 450), pair(170, 255), pair(165, 250), pair(155, 235), pair(150, 225), pair(140, 210), pair(137, 205)],
-      imprenta: [pair(180, 270), pair(148, 207), pair(139, 195), pair(129, 181), pair(115, 161), pair(108, 151), pair(103, 144), pair(99, 139)],
+      publico: [pair(345, 520), pair(210, 315), pair(200, 295), pair(200, 300), pair(180, 265), pair(165, 250), pair(160, 245)],
+      disenadores: [pair(300, 450), pair(180, 270), pair(170, 255), pair(160, 240), pair(160, 240), pair(150, 225), pair(145, 220)],
+      imprenta: [pair(200, 300), pair(157, 219.8), pair(147, 205.8), pair(137, 191.8), pair(122, 170.8), pair(115, 161), pair(109, 152.6), pair(105, 147)],
     },
   },
   {
@@ -222,9 +222,9 @@ export const laserProducts = [
     finish: 'Color economico en formato grande',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(1650, 2450), pair(1230, 1790), pair(925, 1340), pair(700, 1020), pair(595, 865), pair(545, 795), pair(495, 745)],
-      disenadores: [pair(1250, 1850), pair(945, 1375), pair(710, 1030), pair(636, 925), pair(540, 785), pair(495, 720), pair(450, 675)],
-      imprenta: [pair(580, 870), pair(480, 720), pair(450, 675), pair(420, 630), pair(375, 560), pair(350, 525), pair(335, 500), pair(320, 480)],
+      publico: [pair(1700, 2500), pair(1290, 1875), pair(965, 1400), pair(830, 1210), pair(625, 905), pair(575, 835), pair(520, 780)],
+      disenadores: [pair(1300, 1900), pair(990, 1440), pair(740, 1075), pair(664, 965), pair(565, 820), pair(520, 755), pair(470, 705)],
+      imprenta: [pair(610, 910), pair(505, 755), pair(475, 710), pair(440, 660), pair(390, 585), pair(370, 555), pair(350, 525), pair(336, 505)],
     },
   },
   {
@@ -237,7 +237,7 @@ export const laserProducts = [
     prices: {
       publico: [noPair(), noPair(), noPair(), noPair(), noPair(), noPair(), noPair()],
       disenadores: [noPair(), noPair(), noPair(), noPair(), noPair(), noPair(), noPair()],
-      imprenta: [pair(500, 700), pair(410, 570), pair(385, 540), pair(360, 505), pair(320, 445), pair(300, 420), pair(285, 400), pair(275, 385)],
+      imprenta: [pair(530, 740), pair(430, 600), pair(405, 565), pair(375, 525), pair(335, 470), pair(315, 440), pair(300, 420), pair(288, 405)],
     },
   },
   {
@@ -248,9 +248,9 @@ export const laserProducts = [
     finish: 'Papel ilustracion liviano',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(2250, 3250), pair(1685, 2445), pair(1265, 1835), pair(960, 1395), pair(815, 1185), pair(750, 1090), pair(680, 1015)],
-      disenadores: [pair(1700, 2500), pair(1295, 1880), pair(970, 1410), pair(870, 1265), pair(740, 1075), pair(680, 990), pair(615, 920)],
-      imprenta: [pair(800, 1200), pair(660, 985), pair(620, 925), pair(575, 860), pair(515, 770), pair(480, 720), pair(460, 690), pair(440, 660)],
+      publico: [pair(2300, 3350), pair(1750, 2545), pair(1310, 1900), pair(1135, 1645), pair(850, 1235), pair(780, 1130), pair(705, 1055)],
+      disenadores: [pair(1750, 2550), pair(1345, 1955), pair(1005, 1460), pair(905, 1315), pair(770, 1120), pair(705, 1025), pair(640, 955)],
+      imprenta: [pair(840, 1260), pair(690, 1030), pair(645, 965), pair(600, 895), pair(535, 800), pair(505, 755), pair(480, 720), pair(460, 690)],
     },
   },
   {
@@ -261,9 +261,9 @@ export const laserProducts = [
     finish: 'Gramaje medio',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(2400, 3550), pair(1860, 2700), pair(1395, 2025), pair(1060, 1535), pair(905, 1310), pair(825, 1200), pair(750, 1120)],
-      disenadores: [pair(1850, 2700), pair(1430, 2075), pair(1070, 1555), pair(960, 1395), pair(820, 1190), pair(750, 1090), pair(680, 1015)],
-      imprenta: [pair(890, 1330), pair(735, 1100), pair(690, 1030), pair(640, 955), pair(570, 850), pair(535, 800), pair(510, 760), pair(490, 735)],
+      publico: [pair(2550, 3750), pair(1960, 2845), pair(1465, 2130), pair(1265, 1835), pair(950, 1375), pair(870, 1265), pair(790, 1180)],
+      disenadores: [pair(1950, 2850), pair(1505, 2185), pair(1125, 1635), pair(1010, 1465), pair(860, 1250), pair(790, 1150), pair(715, 1070)],
+      imprenta: [pair(940, 1410), pair(770, 1150), pair(725, 1085), pair(670, 1000), pair(600, 895), pair(565, 845), pair(535, 800), pair(515, 770)],
     },
   },
   {
@@ -274,9 +274,9 @@ export const laserProducts = [
     finish: 'Gramaje alto',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(2800, 3750), pair(2230, 3240), pair(1665, 2420), pair(1265, 1840), pair(1080, 1570), pair(990, 1390), pair(900, 1250)],
-      disenadores: [pair(2100, 3050), pair(1715, 2490), pair(1280, 1860), pair(1150, 1670), pair(980, 1425), pair(900, 1260), pair(815, 1135)],
-      imprenta: [pair(1050, 1460), pair(865, 1205), pair(815, 1135), pair(755, 1050), pair(675, 940), pair(635, 885), pair(605, 845), pair(580, 810)],
+      publico: [pair(2900, 3950), pair(2295, 3330), pair(1720, 2490), pair(1485, 2150), pair(1115, 1615), pair(1020, 1425), pair(925, 1290)],
+      disenadores: [pair(2200, 3200), pair(1765, 2560), pair(1320, 1915), pair(1185, 1720), pair(1010, 1465), pair(925, 1295), pair(840, 1170)],
+      imprenta: [pair(1090, 1520), pair(895, 1245), pair(840, 1170), pair(780, 1085), pair(700, 975), pair(655, 915), pair(625, 870), pair(600, 835)],
     },
   },
   {
@@ -287,9 +287,9 @@ export const laserProducts = [
     finish: 'Tarjetas, tapas y piezas de mayor cuerpo',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(3350, 4850), pair(2680, 3900), pair(2005, 2925), pair(1525, 2215), pair(1300, 1890), pair(1190, 1670), pair(1080, 1505)],
-      disenadores: [pair(2650, 3850), pair(2060, 2990), pair(1540, 2235), pair(1385, 2010), pair(1180, 1715), pair(1080, 1515), pair(980, 1365)],
-      imprenta: [pair(1300, 1850), pair(1060, 1480), pair(995, 1390), pair(925, 1290), pair(825, 1150), pair(775, 1080), pair(735, 1030), pair(710, 990)],
+      publico: [pair(3550, 5150), pair(2830, 4125), pair(2115, 3075), pair(1825, 2650), pair(1370, 1995), pair(1255, 1760), pair(1140, 1585)],
+      disenadores: [pair(2800, 4100), pair(2175, 3155), pair(1625, 2360), pair(1460, 2120), pair(1245, 1810), pair(1140, 1600), pair(1035, 1440)],
+      imprenta: [pair(1400, 1950), pair(1115, 1550), pair(1045, 1460), pair(970, 1350), pair(865, 1210), pair(815, 1140), pair(775, 1080), pair(745, 1040)],
     },
   },
   {
@@ -300,9 +300,9 @@ export const laserProducts = [
     finish: 'Cartulina de alto gramaje',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [pair(3500, 5000), pair(2925, 4250), pair(2200, 3200), pair(1675, 2450), pair(1425, 2075), pair(1300, 1825), pair(1180, 1640)],
-      disenadores: [pair(2750, 4000), pair(2250, 3265), pair(1680, 2440), pair(1510, 2190), pair(1285, 1865), pair(1180, 1655), pair(1070, 1490)],
-      imprenta: [pair(1400, 1950), pair(1135, 1580), pair(1065, 1490), pair(990, 1380), pair(885, 1240), pair(830, 1160), pair(790, 1100), pair(760, 1060)],
+      publico: [pair(3650, 5350), pair(3050, 4450), pair(2300, 3350), pair(1970, 2860), pair(1475, 2150), pair(1375, 1900), pair(1230, 1705)],
+      disenadores: [pair(2900, 4250), pair(2345, 3405), pair(1755, 2545), pair(1575, 2285), pair(1340, 1945), pair(1230, 1725), pair(1115, 1550)],
+      imprenta: [pair(1450, 2050), pair(1185, 1650), pair(1115, 1550), pair(1035, 1440), pair(925, 1290), pair(870, 1210), pair(825, 1150), pair(795, 1110)],
     },
   },
   {
@@ -313,9 +313,9 @@ export const laserProducts = [
     finish: 'Stickers en plancha',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(3200), unit(2535), unit(1885), unit(1375), unit(1210), unit(1130), unit(1010)],
-      disenadores: [unit(2450), unit(1950), unit(1450), unit(1250), unit(1100), unit(1025), unit(915)],
-      imprenta: [unit(1200), unit(985), unit(925), unit(860), unit(770), unit(720), unit(685), unit(660)],
+      publico: [unit(3350), unit(2665), unit(2015), unit(1625), unit(1295), unit(1185), unit(1060)],
+      disenadores: [unit(2550), unit(2050), unit(1550), unit(1300), unit(1175), unit(1075), unit(960)],
+      imprenta: [unit(1260), unit(1040), unit(975), unit(905), unit(810), unit(760), unit(720), unit(695)],
     },
   },
   {
@@ -326,9 +326,9 @@ export const laserProducts = [
     finish: 'Especiales - OPP. Holografico segun recargo de lista',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(3900), unit(3640), unit(3510), unit(2825), unit(2175), unit(2025), unit(1925)],
-      disenadores: [unit(3000), unit(2800), unit(2700), unit(2550), unit(1975), unit(1825), unit(1745)],
-      imprenta: [unit(1700), unit(1625), unit(1560), unit(1495), unit(1440), unit(1420), unit(1340), unit(1300)],
+      publico: [unit(4100), unit(3803), unit(3675), unit(3345), unit(2300), unit(2125), unit(2025)],
+      disenadores: [unit(3150), unit(2925), unit(2825), unit(2675), unit(2075), unit(1925), unit(1840)],
+      imprenta: [unit(1800), unit(1715), unit(1645), unit(1580), unit(1520), unit(1495), unit(1415), unit(1370)],
     },
   },
   {
@@ -339,9 +339,9 @@ export const laserProducts = [
     finish: 'Especiales - Martele',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(6250), unit(5900), unit(5650), unit(4450), unit(3850), unit(3800), unit(3600)],
-      disenadores: [unit(4800), unit(4515), unit(4325), unit(4010), unit(3460), unit(3410), unit(3245)],
-      imprenta: [unit(3150), unit(3000), unit(2880), unit(2760), unit(2660), unit(2620), unit(2475), unit(2400)],
+      publico: [unit(6000), unit(5650), unit(5400), unit(4810), unit(3650), unit(3600), unit(3450)],
+      disenadores: [unit(4600), unit(4320), unit(4150), unit(3845), unit(3315), unit(3265), unit(3105)],
+      imprenta: [unit(3000), unit(2875), unit(2760), unit(2645), unit(2550), unit(2510), unit(2370), unit(2300)],
     },
   },
   {
@@ -352,9 +352,9 @@ export const laserProducts = [
     finish: 'Especiales - Antique Gold 240g',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(8400), unit(6550), unit(6150), unit(5450), unit(4900), unit(4600), unit(4200)],
-      disenadores: [unit(6900), unit(5675), unit(5325), unit(4950), unit(4425), unit(4150), unit(3800)],
-      imprenta: [unit(3650), unit(3500), unit(3360), unit(3220), unit(3100), unit(3060), unit(2890), unit(2800)],
+      publico: [unit(8300), unit(6750), unit(6350), unit(6410), unit(5050), unit(4750), unit(4350)],
+      disenadores: [unit(7150), unit(5850), unit(5500), unit(5125), unit(4575), unit(4300), unit(3925)],
+      imprenta: [unit(3800), unit(3630), unit(3480), unit(3340), unit(3220), unit(3170), unit(2990), unit(2900)],
     },
   },
   {
@@ -365,9 +365,9 @@ export const laserProducts = [
     finish: 'Especiales - NatEvol 280g',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(5000), unit(4200), unit(3950), unit(3500), unit(3150), unit(2950), unit(2700)],
-      disenadores: [unit(4400), unit(3625), unit(3400), unit(3175), unit(2825), unit(2650), unit(2425)],
-      imprenta: [unit(2350), unit(2230), unit(2140), unit(2050), unit(1980), unit(1950), unit(1840), unit(1780)],
+      publico: [unit(5300), unit(4350), unit(4100), unit(4125), unit(3250), unit(3100), unit(2800)],
+      disenadores: [unit(4600), unit(3775), unit(3550), unit(3300), unit(2950), unit(2775), unit(2525)],
+      imprenta: [unit(2450), unit(2320), unit(2220), unit(2130), unit(2050), unit(2020), unit(1910), unit(1850)],
     },
   },
   {
@@ -378,9 +378,9 @@ export const laserProducts = [
     finish: 'Especiales - Dali Neve 240g',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(6225), unit(4900), unit(4600), unit(4100), unit(3700), unit(3450), unit(3150)],
-      disenadores: [unit(5450), unit(4250), unit(4000), unit(3725), unit(3325), unit(3125), unit(2850)],
-      imprenta: [unit(2750), unit(2630), unit(2520), unit(2420), unit(2330), unit(2300), unit(2170), unit(2100)],
+      publico: [unit(6550), unit(5150), unit(4850), unit(4845), unit(3850), unit(3600), unit(3300)],
+      disenadores: [unit(5700), unit(4450), unit(4175), unit(3875), unit(3475), unit(3250), unit(2975)],
+      imprenta: [unit(2900), unit(2750), unit(2640), unit(2530), unit(2440), unit(2400), unit(2270), unit(2200)],
     },
   },
   {
@@ -391,9 +391,9 @@ export const laserProducts = [
     finish: 'Servicio de troquelado sobre plancha',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(1600), unit(1125), unit(725), unit(525), unit(475), unit(450), unit(375)],
-      disenadores: [unit(1250), unit(850), unit(550), unit(475), unit(425), unit(400), unit(325)],
-      imprenta: [unit(700), unit(450), unit(420), unit(380), unit(300), unit(275), unit(250), unit(210)],
+      publico: [unit(1750), unit(1175), unit(800), unit(660), unit(525), unit(475), unit(400)],
+      disenadores: [unit(1350), unit(900), unit(600), unit(525), unit(475), unit(425), unit(355)],
+      imprenta: [unit(760), unit(490), unit(460), unit(415), unit(330), unit(300), unit(270), unit(230)],
     },
   },
   {
@@ -404,9 +404,9 @@ export const laserProducts = [
     finish: 'Corte completo por contorno',
     rangesByProfile: { publico: ranges.a3Laser, disenadores: ranges.a3Laser, imprenta: ranges.a3Imprenta },
     prices: {
-      publico: [unit(2100), unit(1575), unit(1050), unit(775), unit(700), unit(650), unit(525)],
-      disenadores: [unit(1650), unit(1200), unit(800), unit(700), unit(625), unit(575), unit(470)],
-      imprenta: [unit(920), unit(650), unit(605), unit(550), unit(435), unit(400), unit(360), unit(305)],
+      publico: [unit(2300), unit(1700), unit(1125), unit(940), unit(750), unit(700), unit(575)],
+      disenadores: [unit(1800), unit(1300), unit(850), unit(750), unit(675), unit(625), unit(510)],
+      imprenta: [unit(990), unit(700), unit(655), unit(595), unit(470), unit(430), unit(390), unit(330)],
     },
   },
   {
@@ -421,7 +421,7 @@ export const laserProducts = [
       imprenta: ranges.laminadoA4Publico,
     },
     prices: {
-      publico: [pair(540, 810), pair(510, 750), pair(345, 525)],
+      publico: [pair(570, 870), pair(540, 810), pair(375, 570)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -438,7 +438,7 @@ export const laserProducts = [
       imprenta: ranges.laminadoA4Publico,
     },
     prices: {
-      publico: [pair(990, 1500), pair(930, 1410), pair(660, 990)],
+      publico: [pair(1080, 1620), pair(1020, 1530), pair(705, 1080)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -455,7 +455,7 @@ export const laserProducts = [
       imprenta: ranges.laminadoA4Publico,
     },
     prices: {
-      publico: [pair(660, 960), pair(630, 930), pair(420, 630)],
+      publico: [pair(720, 1050), pair(660, 990), pair(465, 690)],
       disenadores: [noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair()],
     },
@@ -472,7 +472,7 @@ export const laserProducts = [
       imprenta: ranges.laminadoA3Profesional,
     },
     prices: {
-      publico: [pair(900, 1350), pair(850, 1250), pair(575, 875), pair(550, 1050)],
+      publico: [pair(950, 1450), pair(900, 1350), pair(625, 950), pair(600, 1150)],
       disenadores: [noPair(), noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair(), noPair()],
     },
@@ -489,7 +489,7 @@ export const laserProducts = [
       imprenta: ranges.laminadoA3Profesional,
     },
     prices: {
-      publico: [pair(1650, 2500), pair(1550, 2350), pair(1100, 1650), pair(1025, 1550)],
+      publico: [pair(1800, 2700), pair(1700, 2550), pair(1175, 1800), pair(1100, 1650)],
       disenadores: [noPair(), noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair(), noPair()],
     },
@@ -506,7 +506,7 @@ export const laserProducts = [
       imprenta: ranges.laminadoA3Profesional,
     },
     prices: {
-      publico: [pair(1100, 1600), pair(1050, 1550), pair(700, 1050), pair(650, 975)],
+      publico: [pair(1200, 1750), pair(1100, 1650), pair(775, 1150), pair(725, 1075)],
       disenadores: [noPair(), noPair(), noPair(), noPair()],
       imprenta: [noPair(), noPair(), noPair(), noPair()],
     },
@@ -524,8 +524,8 @@ export const laserProducts = [
     },
     prices: {
       publico: [noPair(), noPair(), noPair(), noPair()],
-      disenadores: [pair(670, 1005), pair(635, 955), pair(575, 865), pair(535, 805)],
-      imprenta: [pair(488, 735), pair(465, 700), pair(420, 630), pair(390, 585)],
+      disenadores: [pair(725, 1090), pair(685, 1030), pair(625, 940), pair(580, 870)],
+      imprenta: [pair(525, 790), pair(500, 750), pair(450, 675), pair(420, 630)],
     },
   },
   {
@@ -541,8 +541,8 @@ export const laserProducts = [
     },
     prices: {
       publico: [noPair(), noPair(), noPair(), noPair()],
-      disenadores: [pair(1260, 1890), pair(1190, 1785), pair(1080, 1620), pair(1005, 1510)],
-      imprenta: [pair(919, 1380), pair(870, 1305), pair(790, 1185), pair(735, 1103)],
+      disenadores: [pair(1365, 2050), pair(1290, 1935), pair(1170, 1755), pair(1090, 1635)],
+      imprenta: [pair(988, 1485), pair(935, 1405), pair(850, 1275), pair(790, 1185)],
     },
   },
   {
@@ -558,8 +558,8 @@ export const laserProducts = [
     },
     prices: {
       publico: [noPair(), noPair(), noPair(), noPair()],
-      disenadores: [pair(815, 1225), pair(770, 1155), pair(700, 1050), pair(650, 975)],
-      imprenta: [pair(595, 895), pair(565, 850), pair(510, 765), pair(475, 715)],
+      disenadores: [pair(885, 1330), pair(835, 1255), pair(755, 1135), pair(705, 1060)],
+      imprenta: [pair(640, 960), pair(605, 910), pair(550, 825), pair(510, 765)],
     },
   },
   {
@@ -574,9 +574,9 @@ export const laserProducts = [
       imprenta: ranges.planchaImanProfesional,
     },
     prices: {
-      publico: [unit(9600), unit(9350), unit(9050)],
-      disenadores: [unit(9100), unit(8900), unit(8600), unit(8150)],
-      imprenta: [unit(6975), unit(6810), unit(6560), unit(6246)],
+      publico: [unit(9700), unit(9400), unit(9100)],
+      disenadores: [unit(9200), unit(8950), unit(8650), unit(8200)],
+      imprenta: [unit(7035), unit(6875), unit(6620), unit(6303)],
     },
   },
   {
@@ -587,9 +587,9 @@ export const laserProducts = [
     finish: 'Impresion inkjet color - columna A4/oficio',
     rangesByProfile: { publico: ranges.inkjetA4, disenadores: ranges.inkjetA4, imprenta: ranges.inkjetA4 },
     prices: {
-      publico: [pair(210, 350), pair(187, 290), pair(180, 235), pair(175, 225), pair(160, 220), pair(143, 195), pair(135, 180), pair(134, 175)],
-      disenadores: [pair(210, 350), pair(187, 290), pair(180, 235), pair(175, 225), pair(160, 220), pair(143, 195), pair(135, 180), pair(134, 175)],
-      imprenta: [pair(160, 240), pair(147, 206), pair(139, 195), pair(134, 188), pair(119, 167), pair(112, 157), pair(107, 150), pair(105, 147)],
+      publico: [pair(220, 350), pair(196, 300), pair(190, 245), pair(198, 258.5), pair(160, 220), pair(150, 205), pair(141, 185), pair(140, 185)],
+      disenadores: [pair(220, 350), pair(196, 300), pair(190, 245), pair(180, 235), pair(160, 220), pair(150, 205), pair(141, 185), pair(140, 185)],
+      imprenta: [pair(170, 260), pair(154, 215.6), pair(146, 204.4), pair(140, 196), pair(125, 175), pair(118, 165.2), pair(112, 156.8), pair(110, 154)],
     },
   },
   {
@@ -600,9 +600,9 @@ export const laserProducts = [
     finish: 'Impresion inkjet color - columna A3 80g obra',
     rangesByProfile: { publico: ranges.inkjetA3, disenadores: ranges.inkjetA3, imprenta: ranges.inkjetA3 },
     prices: {
-      publico: [pair(1125, 1430), pair(825, 1050), pair(785, 995), pair(650, 830), pair(585, 745), pair(495, 630), pair(460, 585), pair(375, 525)],
-      disenadores: [pair(1020, 1430), pair(750, 1050), pair(710, 995), pair(590, 830), pair(530, 745), pair(450, 630), pair(415, 585), pair(375, 525)],
-      imprenta: [pair(530, 790), pair(430, 645), pair(405, 605), pair(375, 560), pair(335, 500), pair(315, 470), pair(300, 450), pair(288, 430)],
+      publico: [pair(1180, 1500), pair(870, 1110), pair(825, 1050), pair(759, 962.5), pair(620, 785), pair(525, 665), pair(480, 610), pair(395, 555)],
+      disenadores: [pair(1070, 1500), pair(790, 1110), pair(750, 1050), pair(625, 875), pair(560, 785), pair(475, 665), pair(435, 610), pair(395, 555)],
+      imprenta: [pair(550, 820), pair(450, 675), pair(420, 630), pair(390, 585), pair(350, 525), pair(330, 495), pair(315, 470), pair(300, 450)],
     },
   },
   {
@@ -613,9 +613,9 @@ export const laserProducts = [
     finish: 'Impresion inkjet color - columna A3 150g obra',
     rangesByProfile: { publico: ranges.inkjetA3, disenadores: ranges.inkjetA3, imprenta: ranges.inkjetA3 },
     prices: {
-      publico: [pair(1600, 2400), pair(1200, 1800), pair(1150, 1700), pair(840, 1255), pair(755, 1125), pair(645, 965), pair(590, 880), pair(535, 800)],
-      disenadores: [pair(1450, 2170), pair(1070, 1595), pair(1015, 1515), pair(840, 1255), pair(755, 1125), pair(645, 965), pair(590, 880), pair(535, 800)],
-      imprenta: [pair(580, 870), pair(535, 800), pair(495, 740), pair(480, 720), pair(455, 680), pair(450, 675), pair(425, 635), pair(410, 615)],
+      publico: [pair(1700, 2500), pair(1250, 1850), pair(1200, 1750), pair(970, 1450), pair(790, 1180), pair(675, 1010), pair(620, 925), pair(560, 835)],
+      disenadores: [pair(1520, 2270), pair(1120, 1670), pair(1060, 1580), pair(880, 1315), pair(790, 1180), pair(675, 1010), pair(620, 925), pair(560, 835)],
+      imprenta: [pair(610, 910), pair(560, 835), pair(520, 775), pair(500, 745), pair(480, 720), pair(470, 705), pair(445, 665), pair(430, 645)],
     },
   },
   {
@@ -626,9 +626,9 @@ export const laserProducts = [
     finish: 'Impresion inkjet color - columna A3 180g obra',
     rangesByProfile: { publico: ranges.inkjetA3, disenadores: ranges.inkjetA3, imprenta: ranges.inkjetA3 },
     prices: {
-      publico: [pair(1700, 2550), pair(1300, 1900), pair(1200, 1800), pair(895, 1335), pair(805, 1200), pair(685, 1025), pair(630, 940), pair(570, 850)],
-      disenadores: [pair(1540, 2300), pair(1140, 1700), pair(1080, 1610), pair(895, 1335), pair(805, 1200), pair(685, 1025), pair(630, 940), pair(570, 850)],
-      imprenta: [pair(620, 930), pair(575, 860), pair(530, 790), pair(515, 770), pair(490, 735), pair(480, 720), pair(455, 680), pair(440, 660)],
+      publico: [pair(1800, 2650), pair(1350, 2000), pair(1250, 1850), pair(1030, 1540), pair(840, 1255), pair(715, 1070), pair(655, 980), pair(595, 890)],
+      disenadores: [pair(1610, 2400), pair(1190, 1775), pair(1125, 1680), pair(935, 1395), pair(840, 1255), pair(715, 1070), pair(655, 980), pair(595, 890)],
+      imprenta: [pair(650, 970), pair(600, 895), pair(555, 830), pair(535, 800), pair(510, 760), pair(505, 755), pair(475, 710), pair(460, 690)],
     },
   },
   {
@@ -639,9 +639,9 @@ export const laserProducts = [
     finish: 'Impresion inkjet color - columna A3 240g obra',
     rangesByProfile: { publico: ranges.inkjetA3, disenadores: ranges.inkjetA3, imprenta: ranges.inkjetA3 },
     prices: {
-      publico: [pair(1850, 2600), pair(1400, 1900), pair(1300, 1800), pair(975, 1360), pair(875, 1220), pair(745, 1040), pair(685, 955), pair(620, 865)],
-      disenadores: [pair(1680, 2340), pair(1240, 1725), pair(1175, 1635), pair(975, 1360), pair(875, 1220), pair(745, 1040), pair(685, 955), pair(620, 865)],
-      imprenta: [pair(680, 950), pair(625, 870), pair(580, 810), pair(560, 780), pair(535, 745), pair(525, 730), pair(495, 690), pair(480, 670)],
+      publico: [pair(1950, 2700), pair(1450, 2000), pair(1350, 1900), pair(1120, 1560), pair(910, 1265), pair(775, 1080), pair(710, 990), pair(645, 900)],
+      disenadores: [pair(1750, 2440), pair(1290, 1795), pair(1220, 1700), pair(1015, 1415), pair(910, 1265), pair(775, 1080), pair(710, 990), pair(645, 900)],
+      imprenta: [pair(700, 980), pair(650, 905), pair(600, 835), pair(580, 810), pair(555, 775), pair(550, 765), pair(515, 720), pair(500, 695)],
     },
   },
   {
@@ -652,9 +652,9 @@ export const laserProducts = [
     finish: 'Impresion inkjet color - columna ADH OBRA',
     rangesByProfile: { publico: ranges.inkjetA3, disenadores: ranges.inkjetA3, imprenta: ranges.inkjetA3 },
     prices: {
-      publico: [unit(2450), unit(1800), unit(1700), unit(1280), unit(1150), unit(980), unit(900), unit(815)],
-      disenadores: [unit(2210), unit(1630), unit(1545), unit(1280), unit(1150), unit(980), unit(900), unit(815)],
-      imprenta: [unit(890), unit(820), unit(760), unit(735), unit(700), unit(690), unit(650), unit(630)],
+      publico: [unit(2500), unit(1850), unit(1750), unit(1460), unit(1185), unit(1010), unit(925), unit(840)],
+      disenadores: [unit(2270), unit(1680), unit(1590), unit(1320), unit(1185), unit(1010), unit(925), unit(840)],
+      imprenta: [unit(910), unit(845), unit(780), unit(755), unit(720), unit(710), unit(670), unit(650)],
     },
   },
 ]
@@ -679,8 +679,8 @@ export const finishingGroups = [
     mode: 'profile',
     unit: 'juego',
     items: [
-      { id: 'td-a5', name: 'Juego de tapas A5', prices: { imprenta: 11100, disenadores: null, publico: 15430 } },
-      { id: 'td-a4', name: 'Juego de tapas A4', prices: { imprenta: 17800, disenadores: null, publico: 24600 } },
+      { id: 'td-a5', name: 'Juego de tapas A5', prices: {"imprenta": 10900, "publico": 15155, "disenadores": null} },
+      { id: 'td-a4', name: 'Juego de tapas A4', prices: {"imprenta": 17500, "publico": 24200, "disenadores": null} },
     ],
   },
   {
@@ -704,9 +704,9 @@ export const finishingGroups = [
     unit: 'hoja',
     tiers: ['1 a 5', '6 a 25', '26 a 100'],
     items: [
-      { id: 'pl-a4', name: 'A4 / Oficio', prices: [1900, 1700, 1400] },
-      { id: 'pl-a5', name: 'A5 / Carnet', prices: [1100, 1050, 840] },
-      { id: 'pl-a3', name: 'A3', prices: [3700, 3400, 2800] },
+      { id: 'pl-a4', name: 'A4 / Oficio', prices: [2300, 2050, 1700] },
+      { id: 'pl-a5', name: 'A5 / Carnet', prices: [1400, 1250, 1020] },
+      { id: 'pl-a3', name: 'A3', prices: [4500, 4100, 3400] },
     ],
   },
   {
@@ -716,7 +716,7 @@ export const finishingGroups = [
     unit: 'u.',
     tiers: ['1 a 5', '6 a 25', '25 a 100', '+ de 100'],
     items: [
-      { id: 'ojalillos-metalicos', name: 'Ojalillo metalico colocado', prices: [420, 233, 187, 120] },
+      { id: 'ojalillos-metalicos', name: 'Ojalillo metalico colocado', prices: [700, 388, 311.6, 200] },
     ],
   },
   {
@@ -726,7 +726,7 @@ export const finishingGroups = [
     unit: 'servicio',
     tiers: ['1 a 5 hojas', '6 a 10 hojas', '11 a 25 hojas', '26 a 99', '+ de 100'],
     items: [
-      { id: 'corte-guillotina', name: 'Corte en guillotina', prices: [800, 600, 350, 8000, 12000] },
+      { id: 'corte-guillotina', name: 'Corte en guillotina', prices: [900, 680, 400, 9000, 13500] },
     ],
   },
   {
@@ -736,7 +736,7 @@ export const finishingGroups = [
     unit: 'u.',
     tiers: ['por unidad', '2 a 10'],
     items: [
-      { id: 'binder', name: 'Binder', prices: [450, 350] },
+      { id: 'binder', name: 'Binder', prices: [900, 800] },
     ],
   },
   {
@@ -746,7 +746,7 @@ export const finishingGroups = [
     unit: 'servicio',
     tiers: ['1 a 50 pags', '51 a 200 pags', '+ de 200 pags'],
     items: [
-      { id: 'scan-completo', name: 'Escaneo completo', prices: [2500, 4700, 7900] },
+      { id: 'scan-completo', name: 'Escaneo completo', prices: [3000, 5700, 9400] },
     ],
   },
   {
@@ -756,7 +756,7 @@ export const finishingGroups = [
     unit: 'hoja',
     tiers: ['1 a 5', '5 a 10', '+ de 10'],
     items: [
-      { id: 'foil-sa4', name: 'Foil SA4', prices: [850, 810, 680] },
+      { id: 'foil-sa4', name: 'Foil SA4', prices: [1000, 950, 800] },
     ],
   },
   {
